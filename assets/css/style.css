@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "Tajawal";
+  src: url("fonts/TAJAWAL-MEDIUM.TTF") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:root {
+  --dark-color: #5f0096;
+  --green-color: #FA00CA;
+  --red-color: #410053;
+  --yellow-color: #e790ff;
+  --section-color: #a155ff3a;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.main-btn {
+  background-color: var(--red-color) !important;
+  color: var(--yellow-color) !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  background-color: var(--red-color);
+}
+
+.mylogo {
+  width: 50px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--green-color) !important;
+  text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-nav .nav-item .nav-link {
+  color: var(--yellow-color);
+  font-weight: 500;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+
+.navbar .search .bi-search {
+  color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+  color: var(--green-color);
+  font-size: 25px;
+  border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color) !important;
+}
+
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 56px);
+}
+
+.h1try {
+  font-weight: 100;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+  color: var(--dark-color);
+  position: absolute;
+  right: 40%;
+}
+
+.features .feat h4 {
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.our-work .box {
+  height: calc(100% + 40px);
+  padding: 5px;
+  background-color: var(--dark-color);
+  overflow: hidden;
+  position: relative;
+  transform: scale(100%);
+  transition-duration: 0.3s;
+}
+
+.our-work .box:hover {
+  transform: scale(105%);
+  transition-duration: 0.3s;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: var(--dark-color);
+  bottom: 5px;
+  width: calc(100% - 10px);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.stuff .description {
+  max-width: 500px;
+  margin: auto;
+}
+
+.projects {
+  background-color: var(--dark-color);
+}
+
+@media (min-width: 768px) {
+  .mt-sm-2 {
+    margin-top: 10px !important;
+  }
+}
+
+.footer {
+  background-color: var(--dark-color);
+}
+
+.footer .copyright > span {
+  color: var(--green-color);
+}
+
+.footer .copyright div span {
+  color: var(--yellow-color);
+}
+
+.footer .contact li img {
+  width: 30px;
+}
+
+.the-link {
+  color: var(--yellow-color);
+}
+
+#mail-link,
+#linkedin-link {
+  width: 45%;
+}
+
+#footer-cont {
+  width: 90%;
+}
+
+.footer ul img:hover {
+  transform: scale(120%) !important;
+  transition-duration: 0.3s !important;
+}
+
+.footer ul img {
+  transform: scale(100%) !important;
+  transition-duration: 0.3s !important;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: var(--yellow-color);
+  color: var(--red-color);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: var(--red-color);
+  padding: 12px 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--yellow-color);
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+  background-color: transparent;
+  color: var(--yellow-color);
+  border: 1px solid var(--yellow-color);
+  margin: -1px;
+}
